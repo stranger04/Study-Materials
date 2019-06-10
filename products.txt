@@ -1,0 +1,39 @@
+create table products
+(
+product_id number(5) primary key,
+product_name varchar2(20) not null,
+product_quantity number(5),
+product_price number(10) not null,
+product_description varchar2(50),
+product_rating number(2),
+category_name varchar2(10) not null,
+product_brand varchar2(10) not null,
+product_image blob,
+product_discount number(5),
+merchant_id number(5) not null,
+FOREIGN KEY(merchant_id) REFERENCES merchant(merchant_id)
+);
+
+
+
+create table merchant
+(
+merchant_id number(5) primary key,
+merchant_name varchar2(20) not null,
+merchant_storename varchar2(20) not null,
+merchant_address varchar2(50),
+merchant_mobilenum number(10),
+merchant_ratting number(2)
+);
+
+
+
+
+*************************************************
+ insert into products (product_id,product_name,product_quantity,product_price,category_name,product_brand,merchant_id) values(3127,'sunmak',10,100,'fashwash','lotus',4121);
+insert into products (product_id,product_name,product_quantity,product_price,category_name,product_brand,merchant_id) values(3120,'samsungG12',10,25000,'phone','samsung',4120);
+insert into products (product_id,product_name,product_quantity,product_price,category_name,product_brand,merchant_id) values(3121,'Apple5S',10,15000,'phone','Apple',4120);
+ insert into products (product_id,product_name,product_quantity,product_price,category_name,product_brand,merchant_id) values(3123,'macbook',10,80000,'laptop','Apple',4121);
+insert into products (product_id,product_name,product_quantity,product_price,category_name,product_brand,merchant_id) values(3126,'NeutrogenaSunscreen',10,100,'sunscreen','lotus',4120);
+  insert into products (product_id,product_name,product_quantity,product_price,category_name,product_brand,merchant_id) values(3125,'gymshoes',10,1500,'shoes','pumam',4120);
+ insert into products (product_id,product_name,product_quantity,product_price,category_name,product_brand,merchant_id) values(3124,'FLIPFLOPS',10,500,'slippers','pumam',4120);
